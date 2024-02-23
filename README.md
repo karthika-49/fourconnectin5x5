@@ -9,7 +9,7 @@
 <h3>Here the results!</h3>
 <div>
   
-<img src="win.png" alt="WIN" height="400px" width="400px">
-<img src="tie.png" alt="TIE" height="400px" width="400px">
+<img src="images/win.png" alt="WIN" height="400px" width="400px">
+<img src="images/tie.png" alt="TIE" height="400px" width="400px">
 
 </div>
