@@ -7,6 +7,9 @@
   <li style="list-style-type: disc;">Tech Stack : HTML, Javascript, CSS</li>
 </ol>
 <h3>Here the results!</h3>
-<img src="win.png" alt="WIN">
-<img src="tie.png" alt="TIE">
+<div>
+  
+<img src="win.png" alt="WIN" height="400px" width="400px">
+<img src="tie.png" alt="TIE" height="400px" width="400px">
 
+</div>
