@@ -7,6 +7,6 @@
   <li style="list-style-type: disc;">Tech Stack : HTML, Javascript, CSS</li>
 </ol>
 <h3>Here the results!</h3>
-<img src="fourconnectin5x5/win.png" alt="WIN">
-<img src="fourconnectin5x5/tie.png" alt="TIE">
+<img src="win.png" alt="WIN">
+<img src="tie.png" alt="TIE">
 
