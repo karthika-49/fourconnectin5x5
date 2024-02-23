@@ -7,6 +7,6 @@
   <li style="list-style-type: disc;">Tech Stack : HTML, Javascript, CSS</li>
 </ol>
 <h3>Here the results!</h3>
-<img src="https://github.com/karthika-49/foueconnectin5x5/blob/main/win.png?raw=true" alt="WIN">
-<img src="https://github.com/karthika-49/foueconnectin5x5/blob/main/tie.png?raw=true" alt="TIE">
+<img src="https://github.com/karthika-49/foueconnectin5x5/blob/main/win.png" alt="WIN">
+<img src="https://github.com/karthika-49/foueconnectin5x5/blob/main/tie.png" alt="TIE">
 
