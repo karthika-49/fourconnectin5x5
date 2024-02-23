@@ -6,3 +6,6 @@
   <li style="list-style-type: disc;">Optimised it using a heuristic evaluation function which reflects the potential of AI to win or block the opponent.</li>
   <li style="list-style-type: disc;">Tech Stack : HTML, Javascript, CSS</li>
 </ol>
+<h3>Here the results!</h3>
+![alt text](https://github.com/karthika-49/foueconnectin5x5/blob/main/win.png?raw=true)
+![alt text](https://github.com/karthika-49/foueconnectin5x5/blob/main/tie.png?raw=true)
