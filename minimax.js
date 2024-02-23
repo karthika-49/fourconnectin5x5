@@ -53,9 +53,46 @@ function minimax(board, depth, alpha, beta, isMaximizing) {
   }
 }
 
+function evaluateLine(cell1, cell2, cell3, cell4) {
+  let computerCount = 0;
+  let opponentCount = 0;
+
+  // Count the occurrences of computer and opponent markers
+  if (cell1 === 'X') {
+    computerCount++;
+  } else if (cell1 === 'O') {
+    opponentCount++;
+  }
+  if (cell2 === 'X') {
+    computerCount++;
+  } else if (cell2 === 'O') {
+    opponentCount++;
+  }
+  if (cell3 === 'X') {
+    computerCount++;
+  } else if (cell3 === 'O') {
+    opponentCount++;
+  }
+  if (cell4 === 'X') {
+    computerCount++;
+  } else if (cell4 === 'O') {
+    opponentCount++;
+  }
+
+  // Calculate the score based on the counts
+  if (computerCount === 4) {
+    return 100; // Computer wins
+  } else if (opponentCount === 4) {
+    return -100; // Opponent wins
+  } else {
+    return computerCount - opponentCount; // RCDC - RCDO evaluation
+  }
+}
+
 function evaluate(board) {
   let score = 0;
 
+  // Check rows and columns
   for (let i = 0; i < 5; i++) {
     for (let j = 0; j < 2; j++) {
       score += evaluateLine(board[i][j], board[i][j + 1], board[i][j + 2], board[i][j + 3]); // Rows
@@ -63,6 +100,7 @@ function evaluate(board) {
     }
   }
 
+  // Check diagonals
   for (let i = 0; i < 2; i++) {
     for (let j = 0; j < 2; j++) {
       score += evaluateLine(board[i][j], board[i + 1][j + 1], board[i + 2][j + 2], board[i + 3][j + 3]);
@@ -78,72 +116,6 @@ function evaluate(board) {
   return score;
 }
 
-function evaluateLine(cell1, cell2, cell3, cell4) {
-  let score = 0;
-
-  // AI's moves
-  if (cell1 == ai) {
-    score = 1;
-  } else if (cell1 == human) {
-    score = -1;
-  }
-
-  if (cell2 == ai) {
-    if (score > 0) {
-      score *= 10;
-    } else if (score < 0) {
-      return 0; // Opponent has already blocked, no chance of winning
-    } else {
-      score = 1;
-    }
-  } else if (cell2 == human) {
-    if (score < 0) {
-      score *= 10;
-    } else if (score > 1) {
-      return 0; // Opponent has already blocked, no chance of winning
-    } else {
-      score = -1;
-    }
-  }
-
-  if (cell3 == ai) {
-    if (score > 0) {
-      score *= 10;
-    } else if (score < 0) {
-      return 0; // Opponent has already blocked, no chance of winning
-    } else {
-      score = 1;
-    }
-  } else if (cell3 == human) {
-    if (score < 0) {
-      score *= 10;
-    } else if (score > 1) {
-      return 0; // Opponent has already blocked, no chance of winning
-    } else {
-      score = -1;
-    }
-  }
-
-  if (cell4 == ai) {
-    if (score > 0) {
-      score *= 10;
-    } else if (score < 0) {
-      return 0; // Opponent has already blocked, no chance of winning
-    } else {
-      score = 1;
-    }
-  } else if (cell4 == human) {
-    if (score < 0) {
-      score *= 10;
-    } else if (score > 1) {
-      return 0; // Opponent has already blocked, no chance of winning
-    } else {
-      score = -1;
-    }
-  }
-
-  return score;
-}
 
 function bestMove() {
   // AI to make its turn
