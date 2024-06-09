@@ -24,7 +24,7 @@ function minimax(board, depth, alpha, beta, isMaximizing) {
           let score = minimax(board, depth + 1, alpha, beta, false);
           board[i][j] = '';
           bestScore = max(score, bestScore);
-          alpha = max(alpha, bestScore);
+          alpha = max(alpha, score);
           if (beta <= alpha) {
             break; // Beta cutoff
           }
@@ -42,7 +42,7 @@ function minimax(board, depth, alpha, beta, isMaximizing) {
           let score = minimax(board, depth + 1, alpha, beta, true);
           board[i][j] = '';
           bestScore = min(score, bestScore);
-          beta = min(beta, bestScore);
+          beta = min(beta, score);
           if (beta <= alpha) {
             break; // Alpha cutoff
           }
